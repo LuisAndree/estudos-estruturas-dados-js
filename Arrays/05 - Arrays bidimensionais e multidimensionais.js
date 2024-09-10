@@ -1,3 +1,20 @@
+//Exemplos do livro
+
+let averageTemp = [];
+averageTemp[0] = [72, 75, 79, 79, 81, 81];
+averageTemp[1] = [81, 79, 75, 75, 73, 73];
+
+function printMatrix(myMatrix) {
+    for (let i = 0; i < myMatrix.length; i++) {
+        for (let j = 0; j < myMatrix[i].length; j++) {
+            console.log(myMatrix[i][j]);
+        }
+    }
+}
+
+printMatrix(averageTemp);
+console.table(averageTemp);
+
 // 1. Criando um Array Bidimensional (Matriz)
 const matrix = [
     [1, 2, 3],
@@ -6,9 +23,9 @@ const matrix = [
 ];
 
 // 2. Acessando elementos de um Array Bidimensional
-console.log("Elemento na posição [0][0]:", matrix[0][0]); 
-console.log("Elemento na posição [1][1]:", matrix[1][1]); 
-console.log("Elemento na posição [2][2]:", matrix[2][2]); 
+console.log("Elemento na posição [0][0]:", matrix[0][0]);
+console.log("Elemento na posição [1][1]:", matrix[1][1]);
+console.log("Elemento na posição [2][2]:", matrix[2][2]);
 
 // 3. Iterando sobre um Array Bidimensional
 console.log("Iterando sobre a matriz:");
@@ -20,13 +37,13 @@ for (let i = 0; i < matrix.length; i++) {
 
 // 4. Criando um Array Multidimensional
 const multiDimensionalArray = [
-    [[1, 2], [3, 4]],  
-    [[5, 6], [7, 8]]   
+    [[1, 2], [3, 4]],
+    [[5, 6], [7, 8]]
 ];
 
 // 5. Acessando elementos de um Array Multidimensional
-console.log("Elemento na posição [0][1][0]:", multiDimensionalArray[0][1][0]); 
-console.log("Elemento na posição [1][0][1]:", multiDimensionalArray[1][0][1]); 
+console.log("Elemento na posição [0][1][0]:", multiDimensionalArray[0][1][0]);
+console.log("Elemento na posição [1][0][1]:", multiDimensionalArray[1][0][1]);
 
 // 6. Iterando sobre um Array Multidimensional
 console.log("Iterando sobre o array multidimensional:");
@@ -38,9 +55,9 @@ for (let i = 0; i < multiDimensionalArray.length; i++) {
     }
 }
 
-matrix[0].push(10); 
+matrix[0].push(10);
 console.log("Matriz após adicionar 10 à primeira linha:", matrix);
 
-const removedElement = matrix[1].splice(1, 1); 
+const removedElement = matrix[1].splice(1, 1);
 console.log("Elemento removido:", removedElement);
 console.log("Matriz após remover elemento:", matrix);
