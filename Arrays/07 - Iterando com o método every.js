@@ -1,4 +1,3 @@
-// 1. Criando um array de números
 const numbers = [2, 4, 6, 8, 10];
 
 // 2. Usando `every` para verificar se todos os números são pares
@@ -6,7 +5,7 @@ const allEven = numbers.every(function(num) {
     return num % 2 === 0;
 });
 
-console.log("Todos os números são pares:", allEven); 
+console.log("Todos os números pares:", allEven); 
 
 // 3. Criando outro array com números ímpares e pares
 const mixedNumbers = [1, 2, 3, 4, 5, 6];
