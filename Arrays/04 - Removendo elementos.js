@@ -1,4 +1,27 @@
-// Removendo Elementos de um Array
+// Exemplos do livro
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// removendo do final do array
+numbers.pop();
+console.log(numbers);
+
+// removendo do inicio 
+numbers.shift();
+console.log(numbers);
+
+//posição especifica splice(indice/qntd/add...);
+numbers.splice(5, 1); // 1 elemento
+console.log(numbers); 
+
+numbers.splice(5, 3); // varios elemento
+console.log(numbers); 
+
+//splice para add
+numbers.splice(5, 0, 6, 7, 8); // add 3 elementos(6, 7, 8) a partir do indice 5
+console.log(numbers);
+
+numbers.splice(3, 2, 14, 15); // maneira de substituir elementos 
+console.log(numbers);
 
 // 1. Inicializando um array de frutas
 const fruits = ["apple", "banana", "cherry", "date"];
