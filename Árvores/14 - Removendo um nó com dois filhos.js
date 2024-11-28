@@ -71,8 +71,21 @@ class Node {
           return node.left;
         }
   
-        // Caso 4: Nó com dois filhos (não abordado aqui, mas requer lógica adicional)
+        // Caso 4: Nó com dois filhos
+        // Substitui pelo menor valor da subárvore direita (sucessor in-ordem)
+        let minNode = this._findMin(node.right);
+        node.key = minNode.key; // Substitui o valor
+        node.right = this._removeNode(node.right, minNode.key); // Remove o sucessor
+        return node;
       }
+    }
+  
+    // Função auxiliar para encontrar o menor nó (sucessor in-ordem)
+    _findMin(node) {
+      while (node.left) {
+        node = node.left;
+      }
+      return node;
     }
   
     // Método para percorrer a árvore em ordem e mostrar os valores
@@ -93,15 +106,16 @@ class Node {
   bst.insert(5);
   bst.insert(15);
   bst.insert(3);
-  bst.insert(7);  // Nó com filho à esquerda
+  bst.insert(7);
   bst.insert(13);
-  bst.insert(17); // Nó com filho à direita
-  bst.insert(12);
+  bst.insert(17);
+  bst.insert(12);  // Nó com dois filhos
+  bst.insert(14);  // Nó com dois filhos
   
-  console.log("Árvore antes de remover nós:", bst.inOrderTraversal()); // [3, 5, 7, 10, 12, 13, 15, 17]
+  console.log("Árvore antes de remover nós:", bst.inOrderTraversal()); // [3, 5, 7, 10, 12, 13, 14, 15, 17]
   
-  bst.remove(7);  // Remove nó com um filho à esquerda
-  bst.remove(17); // Remove nó com um filho à direita
+  bst.remove(13); // Remove nó com dois filhos
+  bst.remove(10); // Remove nó com dois filhos
   
-  console.log("Árvore após remover nós:", bst.inOrderTraversal()); // [3, 5, 10, 12, 13, 15]
+  console.log("Árvore após remover nós:", bst.inOrderTraversal()); // [3, 5, 7, 12, 14, 15, 17]
   
