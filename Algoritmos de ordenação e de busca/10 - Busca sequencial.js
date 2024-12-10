@@ -7,7 +7,6 @@ function sequentialSearchByKey(array, key, value) {
     return -1;
   }
   
-  // Exemplo de uso
   const users = [
     { id: 1, name: "Alice" },
     { id: 2, name: "Bob" },
@@ -21,6 +20,4 @@ function sequentialSearchByKey(array, key, value) {
     console.log("Usuário não encontrado.");
   }
   
-  // Saída esperada:
-  // Usuário encontrado no índice 1: { id: 2, name: "Bob" }
   
