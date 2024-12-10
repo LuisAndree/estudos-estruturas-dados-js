@@ -3,31 +3,28 @@ function interpolationSearch(array, target) {
     let high = array.length - 1;
   
     while (low <= high && target >= array[low] && target <= array[high]) {
-      // Evita divisão por zero
       if (array[low] === array[high]) {
         return array[low] === target ? low : -1;
       }
   
-      // Calcula a posição estimada
       const mid = low + Math.floor(
         ((target - array[low]) * (high - low)) / (array[high] - array[low])
       );
   
       if (array[mid] === target) {
-        return mid; // Elemento encontrado
+        return mid; 
       }
   
       if (array[mid] < target) {
-        low = mid + 1; // Busca na parte superior
+        low = mid + 1; 
       } else {
-        high = mid - 1; // Busca na parte inferior
+        high = mid - 1;
       }
     }
   
-    return -1; // Elemento não encontrado
+    return -1; 
   }
   
-  // Exemplo de uso
   const arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
   const target = 70;
   
@@ -37,7 +34,4 @@ function interpolationSearch(array, target) {
   } else {
     console.log(`Elemento ${target} não encontrado.`);
   }
-  
-  // Saída esperada:
-  // Elemento 70 encontrado no índice 6
   
