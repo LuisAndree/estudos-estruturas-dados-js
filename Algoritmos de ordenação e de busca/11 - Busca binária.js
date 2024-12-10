@@ -1,22 +1,21 @@
 function binarySearchRecursive(array, target, low = 0, high = array.length - 1) {
     if (low > high) {
-      return -1; // Elemento não encontrado
+      return -1; 
     }
   
     const mid = Math.floor((low + high) / 2);
   
     if (array[mid] === target) {
-      return mid; // Elemento encontrado
+      return mid; 
     }
   
     if (array[mid] < target) {
-      return binarySearchRecursive(array, target, mid + 1, high); // Metade superior
+      return binarySearchRecursive(array, target, mid + 1, high); 
     } else {
-      return binarySearchRecursive(array, target, low, mid - 1); // Metade inferior
+      return binarySearchRecursive(array, target, low, mid - 1); 
     }
   }
   
-  // Exemplo de uso
   const arr2 = [2, 4, 6, 8, 10, 12];
   const target2 = 8;
   
@@ -27,6 +26,4 @@ function binarySearchRecursive(array, target, low = 0, high = array.length - 1) 
     console.log(`Elemento ${target2} não encontrado.`);
   }
   
-  // Saída esperada:
-  // Elemento 8 encontrado no índice 3
   
